@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+
+:root {
+  /* colors */
+  --color-grey-dark: #424a4f;
+  --color-grey-medium: #dcdce1;
+  --color-grey-light: #e5e5ea;
+  --color-grey-lightest: #f0f0f3;
+  --color-accent-blue: #0384ac;
+  --color-accent-green: #008000;
+  --color-white: #ffffff;
+
+  /* fonts */
+  --font-family-primary: "Roboto Condensed", sans-serif;
+
+  /* transition */
+  --transition-optimal: all 0.28s ease-in;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: var(--font-family-primary);
+  font-weight: 400;
+  color: var(--color-grey-dark);
+  background-color: var(--color-grey-light);
+  line-height: 1.5;
+}
+.chat {
+  margin: 0 auto;
+  padding: 2rem;
+  max-width: 64rem;
+  background-color: var(--color-grey-medium);
+  border: 1px solid var(--color-accent-blue);
+}
+
+.chat__title {
+  margin: 6rem auto 3rem;
+  text-align: center;
+  font-size: 2.4rem;
+}
+
+.chat__form {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.chat__input {
+  flex-grow: 1;
+  padding: 0.9rem 1.6rem;
+  outline: none;
+  background-color: var(--color-grey-light);
+  border: 1px solid var(--color-accent-blue);
+  transition: var(--transition-optimal);
+}
+
+.chat__input:focus {
+  background-color: var(--color-white);
+}
+
+.chat__btn-submit,
+.chat__btn-geo {
+  display: block;
+  font-size: 1.6rem;
+  padding: 0.8rem 1.6rem;
+  border: 1px solid transparent;
+  line-height: 1.1;
+  background-color: var(--color-accent-green);
+  color: var(--color-white);
+  transition: var(--transition-optimal);
+  cursor: pointer;
+}
+
+.chat__btn-geo {
+  background-color: var(--color-accent-blue);
+}
+
+.chat__btn-submit:hover {
+  background-color: var(--color-grey-light);
+  border: 1px solid var(--color-accent-green);
+  color: var(--color-accent-green);
+}
+
+.chat__btn-geo:hover {
+  background-color: var(--color-grey-light);
+  border: 1px solid var(--color-accent-blue);
+  color: var(--color-accent-blue);
+}
+
+.chat__field {
+  padding: 2rem;
+  background-color: var(--color-grey-light);
+  border: 1px solid var(--color-accent-blue);
+  min-height: 32rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.chat__item {
+  padding: 0.8rem 1.6rem;
+  border: 1px solid var(--color-accent-blue);
+}
+
+.chat__req {
+  margin-right: 4rem;
+  background-color: rgb(223, 239, 202);
+  align-self: flex-start;
+}
+
+.chat__res {
+  margin-left: 4rem;
+  background-color: rgb(239, 236, 202);
+  align-self: flex-end;
+}
+
+.chat__geo {
+  margin: 0 4rem;
+  background-color: rgb(202, 215, 239);
+  text-align: center;
+}
+
+.chat__err {
+  margin: 0 4rem;
+  background-color: rgb(239, 202, 202);
+  text-align: center;
+}
